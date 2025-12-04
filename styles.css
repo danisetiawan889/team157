@@ -1,0 +1,353 @@
+/* GLOBAL */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #000;
+  color: #ffffff;
+  font-family: Arial, sans-serif;
+  overflow-x: hidden;
+}
+
+/* PARTICLE BACKGROUND */
+.particles {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background: url("assets/images/bg-round.png");
+  background-position: center;
+  background-size: cover;
+  opacity: 0.12;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* HEADER */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 30px;
+  border-bottom: 2px solid #00ff00;
+  background: #000c;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  width: 70px;
+  height: 70px;
+  background-image: url("assets/images/ecalipse-157.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 50%;
+  box-shadow: 0 0 15px #00ff00;
+}
+
+.title {
+  font-size: 32px;
+  text-shadow: 0 0 15px #00ff00;
+}
+
+/* NAV */
+nav {
+  display: flex;
+  gap: 25px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #00ff00;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  color: #fff;
+  text-shadow: 0 0 8px #00ff00;
+}
+
+/* Mobile Toggle */
+.menu-toggle {
+  display: none;
+  font-size: 32px;
+  cursor: pointer;
+  color: #00ff00;
+}
+
+/* HERO */
+#hero {
+  text-align: center;
+  padding: 100px 20px;
+}
+
+.hero-logo {
+  width: 180px;
+  border-radius: 100%;
+  filter: drop-shadow(0 0 20px #00ff00);
+}
+
+.hero-title {
+  font-size: 40px;
+  margin-top: 20px;
+  text-shadow: 0 0 20px #00ff00;
+}
+
+.hero-desc {
+  margin-top: 10px;
+  opacity: 0.9;
+}
+
+.glow-btn {
+  padding: 12px 30px;
+  background: #00ff00;
+  color: black;
+  font-weight: bold;
+  border-radius: 8px;
+  display: inline-block;
+  margin-top: 25px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.glow-btn:hover {
+  background: white;
+  transform: scale(1.1);
+}
+
+/* SECTIONS */
+section {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.fade-section {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: 0.6s;
+}
+
+.fade-section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* STATS */
+.neon-card {
+  border: 2px solid #00ff00;
+  padding: 15px;
+  border-radius: 10px;
+  margin: 10px;
+  transition: 0.3s;
+  box-shadow: 0 0 15px #00ff00;
+}
+
+.neon-card:hover {
+  transform: scale(1.05);
+}
+
+/* TEAM SLIDER */
+.team-slider {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.team-members {
+  position: relative;
+  width: 100%;
+  height: 300px; /* Tinggi tetap untuk efek fade */
+}
+
+.member {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.member.active {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.member.hidden {
+  opacity: 0;
+  transform: scale(0.8);
+}
+
+.member img {
+  border-radius: 50%;
+  border: 3px solid #00ff00;
+  width: 140px;
+  margin: 0 auto;
+}
+
+.slider-controls {
+  margin-top: 10px; /* Kurangi dari 20px agar tidak terlalu bawah */
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.slider-btn {
+  background: #00ff00;
+  color: black;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+.slider-btn:hover {
+  background: white;
+}
+
+/* GALLERY SLIDER */
+.gallery-slider {
+  width: 100%;
+  max-width: 1200px; /* Lebih lebar untuk 3 gambar */
+  margin: 0 auto;
+}
+
+.gallery {
+  display: flex;
+  overflow: hidden;
+  width: 100%;
+  transition: transform 0.5s ease;
+}
+
+.gallery img {
+  flex: 0 0 33.33%; /* 3 gambar per slide di desktop */
+  max-width: 400px;
+  border-radius: 10px;
+  transition: 0.5s;
+}
+
+/* CONTACT US */
+#contact {
+  padding: 80px 20px;
+}
+
+#contactForm {
+  max-width: 500px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+#contactForm input,
+#contactForm textarea {
+  padding: 12px;
+  border: 2px solid #00ff00;
+  border-radius: 8px;
+  background: #111;
+  color: #fff;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+#contactForm input:focus,
+#contactForm textarea:focus {
+  border-color: #fff;
+  box-shadow: 0 0 10px #00ff00;
+}
+
+#contactForm textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+#formResponse {
+  margin-top: 15px;
+  color: #00ff00;
+  font-weight: bold;
+}
+
+/* FOOTER */
+footer {
+  padding: 30px 20px;
+  text-align: center;
+  border-top: 2px solid #00ff00;
+  background: #000;
+  color: #00ff00;
+  font-size: 14px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  nav {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    right: 20px;
+    top: 100px;
+    background: #000;
+    padding: 20px;
+    border: 2px solid #00ff00;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  nav.show {
+    display: flex;
+  }
+
+  .team-slider {
+    max-width: 300px;
+  }
+
+  .member img {
+    width: 100px;
+  }
+
+  .gallery img {
+    flex: 0 0 50%; /* 2 gambar per slide di mobile */
+  }
+
+  .slider-btn {
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+}
+
+/* DESKTOP: Team Members berjajar 5 foto */
+@media (min-width: 769px) {
+  .team-members {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+    height: auto;
+    position: static;
+  }
+
+  .member {
+    position: static;
+    flex: 0 0 auto;
+    width: 180px; /* Lebar tetap untuk 5 foto */
+    opacity: 1 !important;
+    transform: scale(1) !important;
+  }
+
+  .slider-controls {
+    display: none; /* Sembunyikan tombol di desktop */
+  }
+
+  .gallery img {
+    flex: 0 0 33.33%; /* 3 gambar per slide di desktop */
+  }
+}

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eclipse 157 - Mobile Legends Team</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Animated Background Particles -->
+    <div class="particles"></div>
+
+    <header>
+        <div class="logo"></div>
+        <h1 class="title"><span style="color: yellow;">157 </span>ecalipse</h1>
+
+        <div class="menu-toggle" id="menuToggle">☰</div>
+
+        <nav id="navbar">
+            <a href="#hero">Home</a>
+            <a href="#about">About</a>
+            <a href="#team">Team</a>
+            <a href="#gallery">Gallery</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <!-- HERO SECTION (baru & keren) -->
+    <section id="hero">
+        <img src="assets/images/ecalipse-157.png" class="hero-logo">
+        <h2 class="hero-title">Rise of The ecalipse</h2>
+        <p class="hero-desc">The strongest Mobile Legends team forged in unity, strategy, and pure skill.</p>
+
+        <a href="#about" class="glow-btn">Explore Team</a>
+    </section>
+
+    <section id="about" class="fade-section">
+        <h2>About Eclipse 157</h2>
+        <p>Eclipse 157 is a competitive Mobile Legends team known for precision, strategy, and teamwork. Our mission is simple: dominate every stage we step on.</p>
+
+        <div class="stats">
+            <div class="stat neon-card">🏆 5 Tournaments Won</div>
+            <div class="stat neon-card">👥 5 Members</div>
+            <div class="stat neon-card">🔥 1 Year Active</div>
+        </div>
+    </section>
+
+    <section id="team" class="fade-section">
+        <h2>Team Members</h2>
+        <div class="team-slider">
+            <div class="team-members">
+                <div class="member neon-card active">
+                    <img src="assets/images/min-4.jpg">
+                    <h3>Player 1</h3>
+                    <p>Goldlaner</p>
+                    <p class="ign">IGN: EclipseSniper</p>
+                </div>
+
+                <div class="member neon-card hidden">
+                    <img src="assets/images/min-4.jpg">
+                    <h3>Player 2</h3>
+                    <p>Explaner</p>
+                    <p class="ign">IGN: EclipseShield</p>
+                </div>
+
+                <div class="member neon-card hidden">
+                    <img src="assets/images/min-4.jpg">
+                    <h3>Player 3</h3>
+                    <p>Jungler</p>
+                    <p class="ign">IGN: EclipseBlade</p>
+                </div>
+
+                <div class="member neon-card hidden">
+                    <img src="assets/images/min-4.jpg">
+                    <h3>Player 4</h3>
+                    <p>Midlaner</p>
+                    <p class="ign">IGN: EclipseMage</p>
+                </div>
+
+                <div class="member neon-card hidden">
+                    <img src="assets/images/elkan.jpeg">
+                    <h3>Elkandjut</h3>
+                    <p>Roamer</p>
+                    <p class="ign">IGN: EclipseHeal</p>
+                </div>
+            </div>
+            <div class="slider-controls">
+                <button id="teamPrev" class="slider-btn">◀ Prev</button>
+                <button id="teamNext" class="slider-btn">Next ▶</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="gallery" class="fade-section">
+        <h2>Gallery</h2>
+        <div class="gallery-slider">
+            <div class="gallery">
+                <img src="assets/images/bg-round.png">
+                <img src="assets/images/bg-round.png">
+                <img src="assets/images/bg-round.png">
+                <img src="assets/images/bg-round.png">
+            </div>
+            <div class="slider-controls">
+                <button id="prev" class="slider-btn">◀ Prev</button>
+                <button id="next" class="slider-btn">Next ▶</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="fade-section">
+        <h2>Contact Us</h2>
+        <form id="contactForm">
+            <input type="text" id="name" placeholder="Name" required>
+            <input type="email" id="email" placeholder="Email" required>
+            <textarea id="message" placeholder="Message..." required></textarea>
+            <button class="glow-btn" type="submit">Send</button>
+        </form>
+        <p id="formResponse"></p>
+    </section>
+
+    <footer>
+        <p>© 2025 | Eclipse 157 Esports | All Rights Reserved</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
